@@ -88,3 +88,20 @@ for row in range(length):
 		print(string[col], end="")
 	print()
 
+
+
+"""Pattern for printing in Floyd's triangle in nice shape
+	1
+	23
+	456
+	78910
+	1112131415
+"""
+
+
+num = 1
+for i in range(n):
+	for j in range(i+1):
+		print(format(num, "<4"), end="")
+		num = num+1
+	print()
