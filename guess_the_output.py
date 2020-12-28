@@ -35,3 +35,20 @@ for i in range(1, 20):
 else:
 	print("Hello")
 
+# 5. 
+
+list1 = ["These", "are", "a", ["few", "words"], "that", "we", "will", "use"]
+print(list1[3:4])
+print(list1[3:4][0])
+print(list1[3:4][0][1][2])
+
+# 6.
+
+def function(n, list1=[]):
+	list1.append(list1.append(n))
+	return list1
+
+for i in range(4):
+	list2 = function(i)
+print(list2)
+

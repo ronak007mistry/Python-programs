@@ -105,3 +105,69 @@ for i in range(n):
 		print(format(num, "<4"), end="")
 		num = num+1
 	print()
+
+
+
+
+"""Pattern for printing
+	1
+	2 6
+	3 7 10
+	4 8 11 13
+	5 9 12 14 15
+"""
+
+for row in range(n):
+	val = row+1
+	dec = n-1
+	for col in range(row+1):
+		print(val, end=" ")
+		val = val+dec
+		dec = dec-1
+	print()
+
+
+"""Pattern for printing
+	1
+	2 9
+	3 8 10
+	4 7 11 14
+	5 6 12 13 15
+"""
+
+
+for i in range(n):
+	for j in range(i+1):
+		x=0
+		for k in range(j):
+			x = x+n-k
+		if j%2 == 0:
+			print(x+i-j+1, end=" ")
+		else:
+			print(x+n-i, end=" ")
+	print()
+
+
+"""Pattern for printing
+	15
+	14 10 
+	13 9 6
+	12 8 5 3
+	11 7 4 2 1
+"""
+
+def num(n1):
+	if n1 == 1:
+		return 1
+	return n1 + num(n1-1)
+
+k = num(n)	
+for row in range(n):
+	val = k-row
+	dec = n-1
+	for col in range(row+1):
+		print(format(val, "<3"), end="")
+		val = val-dec
+		dec = dec-1
+	print()
+
